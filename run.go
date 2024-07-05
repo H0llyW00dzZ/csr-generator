@@ -18,13 +18,24 @@ import (
 func main() {
 	reader := bufio.NewReader(os.Stdin)
 
-	fmt.Print("Enter the common name (domain name): ")
+	fmt.Print("Enter the common name (domain name) or type 'exit' to quit: ")
 	commonName, _ := reader.ReadString('\n')
 	commonName = strings.TrimSpace(commonName)
 
-	fmt.Print("Enter the number of Subject Alternative Names (SANs): ")
+	if commonName == "exit" {
+		fmt.Println("Exiting the program.")
+		return
+	}
+
+	fmt.Print("Enter the number of Subject Alternative Names (SANs) or type 'exit' to quit: ")
 	sanCountStr, _ := reader.ReadString('\n')
 	sanCountStr = strings.TrimSpace(sanCountStr)
+
+	if sanCountStr == "exit" {
+		fmt.Println("Exiting the program.")
+		return
+	}
+
 	sanCount, err := strconv.Atoi(sanCountStr)
 	if err != nil {
 		log.Fatalf("Invalid number of SANs: %v", err)
@@ -32,9 +43,15 @@ func main() {
 
 	var dnsNames []string
 	for i := 0; i < sanCount; i++ {
-		fmt.Printf("Enter SAN %d (DNS name): ", i+1)
+		fmt.Printf("Enter SAN %d (DNS name) or type 'exit' to quit: ", i+1)
 		dnsName, _ := reader.ReadString('\n')
 		dnsName = strings.TrimSpace(dnsName)
+
+		if dnsName == "exit" {
+			fmt.Println("Exiting the program.")
+			return
+		}
+
 		dnsNames = append(dnsNames, dnsName)
 	}
 

@@ -1,6 +1,6 @@
 # CSR Generator
 
-[![Go Reference](https://pkg.go.dev/badge/github.com/H0llyW00dzZ/csr-generator/csr.svg)](https://pkg.go.dev/github.com/H0llyW00dzZ/csr-generator/csr)
+[![Go Reference](https://pkg.go.dev/badge/github.com/H0llyW00dzZ/csr-generator/csr.svg)](https://pkg.go.dev/github.com/H0llyW00dzZ/csr-generator)
 
 The CSR Generator is a Go package that provides functionality for generating Certificate Signing Requests (CSRs) and private keys. It simplifies the process of creating CSRs with specified common names and Subject Alternative Names (SANs).
 
