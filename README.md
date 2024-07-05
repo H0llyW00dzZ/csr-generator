@@ -13,6 +13,18 @@ The CSR Generator is a Go package that provides functionality for generating Cer
 ## Currently Supported
 
 - [x] Private CAs that rely on domain and DNS names (e.g, [`Google Cloud Private CAs`](https://cloud.google.com/security/products/certificate-authority-service))
+> [!NOTE]
+> `Private CAs that rely on domain and DNS names` can be used for `Enterprise/DevOps/DevSecOps` purposes.
+>
+> **Example:**
+>
+> <p align="center">
+>   <img src="https://i.imgur.com/EtDMK04.png" alt="example leaf cert issued by Private CAs" />
+>   <img src="https://i.imgur.com/R4p4C3l.png" alt="example leaf cert issued by Private CAs" />
+> </p>
+>
+> The generated CSRs and private keys can be used with private CAs like Google Cloud Private CAs. Additionally, they can be bound to Cloudflare for the root CAs (e.g., [`Custom Origin Store`](https://developers.cloudflare.com/ssl/origin-configuration/custom-origin-trust-store/), [`Custom CAs`](https://developers.cloudflare.com/ssl/edge-certificates/custom-certificates/)) for front-end usage.
+
 - [x] Public CAs that rely on domain and DNS names
 
 
