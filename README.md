@@ -14,7 +14,7 @@ The CSR Generator is a Go package that provides functionality for generating Cer
 
 - [x] Private CAs that rely on domain and DNS names (e.g, [`Google Cloud Private CAs`](https://cloud.google.com/security/products/certificate-authority-service))
 > [!NOTE]
-> `Private CAs that rely on domain and DNS names` can be used for `Enterprise/DevOps/DevSecOps` purposes.
+> `Private CAs that rely on domain and DNS names` can be used for `Enterprise/DevOps/DevSecOps/Zero Trust` purposes.
 >
 > **Example:**
 >
